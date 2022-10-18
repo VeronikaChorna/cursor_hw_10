@@ -97,13 +97,6 @@ body {
     width: 50%;
   }
 
-  .circle-block {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-
   .base {
     width: 350px;
     height: 20px;
@@ -111,16 +104,21 @@ body {
     border-radius: 10px;
   }
 
+  .circle-block {
+    display: flex;
+    margin-top: 100px;
+  }
+
   .circle {
     width: 50px;
     height: 50px;
     border-radius: 50px;
     position: relative;
-    margin-top: 100px;
     background: linear-gradient(rgb(227, 230, 233), rgb(71, 126, 130));;
+    transform-origin: 50px -100px;
   }
 
-  .circle::after {
+  .circle::before {
     content: "";
     position: absolute;
     height: 100px;
@@ -131,23 +129,23 @@ body {
   }
 
   .first-circle {
-    transform-origin:20% -100px;
-    animation: first-element 1s linear infinite alternate;
+    z-index: -1;
+    animation: first-element 1s 1s infinite alternate;
   }
 
   .last-circle {
-    transform-origin: -20% -100px;
-    animation: first-element 1s linear infinite alternate 2s;
+    z-index: -1;
+    animation: last-element 1s infinite alternate 2s;
   }
 
   @keyframes first-element {
     to {
-      transform: rotate(30deg) translateX(-50%);
-    }
+      transform: rotate(30deg);
   }
+}
 
-  /* @keyframes last-element {
+  @keyframes last-element {
     to {
-      transform: rotate(30deg) translateX(50%);
-    }
-  } */
+      transform: rotate(-30deg) translateY(-20px);
+  }
+  }
