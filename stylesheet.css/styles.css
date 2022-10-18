@@ -1,0 +1,113 @@
+/* .box {
+    height: 200px;
+    flex-basis: 40%;
+    transition: height 1s cubic-bezier(0.66,-0.4, 0, 0.65);
+    background: linear-gradient(rgb(189, 222, 189), rgb(12, 44, 28));
+    animation: go-top 5s linear forwards infinite;
+}
+
+@keyframes go-top {
+    to {
+        height: 100px;
+        transform: translateY(-100px);
+
+    }
+} */
+
+/* animation: name duration timing-function delay iteration-count direction fill-mode; */
+
+/* .box:hover {
+    height: 400px;
+    background-color: rgb(81, 53, 53);
+    transform: translateY(50px)
+} */
+
+body {
+    background: url(./images/pexels-felix-mittermeier-956999.jpg);
+    background-size: cover;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+}
+
+.jedi-swords {
+    display: flex;
+    width: 50%;
+    height: 100%;
+    justify-content: space-around;
+    flex-direction: column;
+    margin: 10%;
+}
+
+.sword1 {
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+    box-shadow: 0 0 5px #03e9f4, 0 0 5px #03e9f4, 0 0 10px #03e9f4,
+      0 0 100px #03e9f4;
+    background: linear-gradient(rgb(191, 223, 234), rgb(106, 124, 130));
+    margin-top: 30px;
+    animation: sword-top 2s linear infinite alternate;
+  }
+
+  @keyframes sword-top {
+    to {
+        transform: translateY(100px);
+    }
+
+    75% {
+      opacity: 0.7;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .sword2 {
+    display: flex;
+    justify-content: right;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+    box-shadow: 0 0 5px #f403d4, 0 0 5px #f40398, 0 0 10px #f403f0,
+      0 0 100px #f403d8;
+    background: linear-gradient(rgb(234, 191, 212), rgb(132, 104, 117));
+    margin-top: 30px;
+    animation: sword-middle 2s linear infinite alternate;
+  }
+
+  @keyframes sword-middle {
+    to {
+      transform: rotateZ(50deg) translateY(40px);
+    }
+  }
+
+  .sword3 {
+    display: flex;
+    justify-content: left;
+    border-radius: 5px;
+    width: 400px;
+    height: 20px;
+    box-shadow: 0 0 5px #03f42f, 0 0 5px #03f4c8, 0 0 10px #03f48c,
+      0 0 100px #03f488;
+    background: linear-gradient(rgb(151, 219, 197), rgb(93, 137, 123));
+    margin-top: 30px;
+    animation: sword-last 2s linear infinite alternate;
+  }
+
+  @keyframes sword-last {
+    to {
+      transform: rotateZ(-50deg) translateY(-40px);
+    }
+  }
+
+  .sword-inside {
+    width: 70px;
+    background: linear-gradient(rgb(175, 191, 175), rgb(63, 69, 66));;
+    border-radius: 5px;
+  }
