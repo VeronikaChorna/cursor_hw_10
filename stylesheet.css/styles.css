@@ -115,7 +115,7 @@ body {
     border-radius: 50px;
     position: relative;
     background: linear-gradient(rgb(227, 230, 233), rgb(71, 126, 130));;
-    transform-origin: 50px -100px;
+    transform-origin: 50% -100px;
   }
 
   .circle::before {
@@ -130,22 +130,28 @@ body {
 
   .first-circle {
     z-index: -1;
-    animation: first-element 1s 1s infinite alternate;
+    animation: first-element 0.8s infinite alternate;
   }
 
   .last-circle {
     z-index: -1;
-    animation: last-element 1s infinite alternate 2s;
+    animation: last-element 0.8s infinite alternate 0.8s;
   }
 
   @keyframes first-element {
-    to {
+    0%, 50% {
+      transform: rotate(0);
+    }
+    100% {
       transform: rotate(30deg);
   }
 }
 
   @keyframes last-element {
-    to {
-      transform: rotate(-30deg) translateY(-20px);
+    0%, 50% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(-30deg);
   }
   }
